@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7J-Ja-YzO">
+                                <rect key="frame" x="0.0" y="803" width="414" height="59"/>
+                                <color key="backgroundColor" red="0.088547252118587494" green="0.95199424028396606" blue="0.87747973203659058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="p7J-Ja-YzO" secondAttribute="height" multiplier="7:1" id="j2s-PZ-X2Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="35"/>
+                                <state key="normal" title="Click here">
+                                    <color key="titleColor" red="0.29094558954238892" green="0.35402488708496094" blue="0.078183583915233612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RwC-QW-EBp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 clicks" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-1i-EhW">
+                                <rect key="frame" x="138" y="384" width="138" height="138"/>
+                                <color key="backgroundColor" red="0.92707544565200806" green="0.99575656652450562" blue="0.016284799203276634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eGD-1i-EhW" secondAttribute="height" multiplier="1:1" id="W1J-d6-6ot"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="29"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOC-6C-q4L">
+                                <rect key="frame" x="276" y="44" width="138" height="34.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fOC-6C-q4L" secondAttribute="height" multiplier="4:1" id="GzP-3c-smC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <state key="normal" title="Set to 0">
+                                    <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="setToZeroButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PMU-DJ-uWk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fOC-6C-q4L" secondAttribute="trailing" id="CLF-od-QNC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p7J-Ja-YzO" secondAttribute="trailing" id="OMe-lE-EZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="p7J-Ja-YzO" secondAttribute="bottom" id="a0g-bW-k7i"/>
+                            <constraint firstItem="p7J-Ja-YzO" firstAttribute="width" secondItem="eGD-1i-EhW" secondAttribute="height" multiplier="3:1" id="bpM-CD-QOU"/>
+                            <constraint firstItem="eGD-1i-EhW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="e2m-de-6hx"/>
+                            <constraint firstItem="eGD-1i-EhW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ebU-Tt-wFn"/>
+                            <constraint firstItem="fOC-6C-q4L" firstAttribute="leading" secondItem="eGD-1i-EhW" secondAttribute="trailing" id="j8O-rS-UL5"/>
+                            <constraint firstItem="fOC-6C-q4L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nDj-Rl-vwb"/>
+                            <constraint firstItem="p7J-Ja-YzO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zsU-oU-VTX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="clickButonLabel" destination="p7J-Ja-YzO" id="BHs-nl-GLe"/>
+                        <outlet property="setToZero" destination="fOC-6C-q4L" id="yaB-zf-nMB"/>
+                        <outlet property="showClicksCount" destination="eGD-1i-EhW" id="x8D-ld-j5X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="113"/>
         </scene>
     </scenes>
 </document>

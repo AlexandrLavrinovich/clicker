@@ -9,12 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var clickCount: Int = 0
+    
+    @IBOutlet weak var showClicksCount: UILabel!
+    @IBOutlet weak var clickButonLabel: UIButton!
+    @IBOutlet weak var setToZero: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func setToZeroButton(_ sender: Any) {
+        clickCount = 0
+        showClicksCount.text = "\(clickCount) clicks"
+    }
+    
+    @IBAction func clickButton(_ sender: Any) {
+        clickCount += 1
+        showClicksCount.text = "\(clickCount) clicks"
+        
+        
+    }
 }
 
