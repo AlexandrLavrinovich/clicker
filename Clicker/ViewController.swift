@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickButton(_ sender: Any) {
-        clickCount += 10000000000000000
+        clickCount += 1
         showClicksCount.text = "\(clickCount) clicks"
         
         
