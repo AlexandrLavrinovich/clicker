@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBAction func setToZeroButton(_ sender: Any) {
         clickCount = 0
         showClicksCount.text = "\(clickCount) clicks"
+        print("show")
+        
     }
     
     @IBAction func clickButton(_ sender: Any) {
