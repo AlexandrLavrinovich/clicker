@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         clickCount = 0
         showClicksCount.text = "\(clickCount) clicks"
         print("show")
+        print("secondShow")
+        print("HelloDoublefeature")
         
     }
     
