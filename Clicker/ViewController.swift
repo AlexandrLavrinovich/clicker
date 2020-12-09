@@ -40,5 +40,9 @@ class ViewController: UIViewController {
     func testFunc() {
         print("test")
     }
+    
+    func netTest() {
+        print("newTest")
+    }
 }
 
