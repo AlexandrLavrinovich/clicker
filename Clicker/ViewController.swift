@@ -36,5 +36,9 @@ class ViewController: UIViewController {
         
         
     }
+    
+    func testFunc() {
+        print("test")
+    }
 }
 
